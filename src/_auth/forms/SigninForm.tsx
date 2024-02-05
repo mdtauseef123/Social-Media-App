@@ -1,4 +1,4 @@
-import  { z }from "zod";
+import  { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
@@ -19,7 +19,6 @@ const SigninForm = () => {
 
     // For Sign-In 
     const {mutateAsync: signInAccount} = useSignInAccount();
-  
 
     // 1. Define your form.
     const form = useForm<z.infer<typeof SigninValidation>>({
@@ -56,7 +55,7 @@ const SigninForm = () => {
   return (
     <Form {...form}>
       <div className="sm:w-420 flex-center flex-col">
-        <img src="/assets/images/logo.svg" alt="logo" />
+        <img src="/assets/images/logon.svg" alt="logo" />
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">Log in to your account</h2>
         <p className="text-light-3 small-medium md:base-regular">
           Welcome Back! Please enter your details
